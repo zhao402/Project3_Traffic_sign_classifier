@@ -35,7 +35,9 @@ Each image randomly chooses one of transforms from the above three options and s
 ![](examples/train_aug.PNG)
 Model Architecture
 Two model architectures are used during the training process.
+
 Modified LeNet
+
 	Input size	Output size	Kernel size	Stride size	Keep_prob
 	
 Conv 1	32, 32, 1	32, 32, 64	3, 3, 1, 64	1, 1, 1, 1	N
@@ -45,76 +47,139 @@ Relu	32, 32, 64	32, 32, 64	N	N	N
 Max_pooling	32, 32, 64	16, 16, 64	1, 2, 2, 1	1, 2, 2, 1	N
 
 Batch Norm	16, 16, 64	16, 16, 64	N	N	N
+
 Conv 2	16, 16, 64	16, 16, 128	3, 3, 64, 128	1, 1, 1, 1	N
+
 Relu	16, 16, 128	16, 16, 128	N	N	N
+
 Max_pooling	16, 16, 128	8, 8, 128	1, 2, 2, 1	1, 2, 2, 1	N
+
 Batch Norm	8, 8, 128	8, 8, 128	N	N	N
+
 Conv 3	8, 8, 128	8, 8, 256	3, 3, 128, 256	1, 1, 1, 1	N
+
 Relu	8, 8, 256	8, 8, 256	N	N	N
+
 Max_pooling	8, 8, 256	4, 4, 256	1, 2, 2, 1	1, 2, 2, 1	N
+
 Batch Norm	4, 4, 256	4, 4, 256	N	N	N
+
 Conv 4	4, 4, 256	4, 4, 512	3, 3, 256, 512	1, 1, 1, 1	N
+
 Relu	4, 4, 512	4, 4, 512	N	N	N
+
 Max_pooling	4, 4, 512	2, 2, 512	1, 2, 2, 1	1, 2, 2, 1	N
+
 Batch Norm	2, 2, 512	2, 2, 512	N	N	N
+
 Flatten	2, 2, 512	2048	N	N	N
+
 Fully connect	2048	120	N	N	N
+
 Relu	120	120	N	N	N
+
 Dropout	120	120	N	N	0.75
+
 Batch Norm	120	120	N	N	N
+
 Fully connect	120	84	N	N	N
+
 Relu	84	84	N	N	N
+
 Dropout	84	84	N	N	0.75
+
 Batch Norm	84	84	N	N	N
+
 Fully connect	84	43	N	N	N
 
 VGGNet
+
 	Input size	Output size	Kernel size	Stride size	Keep_prob
+	
 Conv 1	32, 32, 1	32, 32, 32	3, 3, 1,32	1, 1, 1, 1	N
+
 Relu	32, 32, 32	32, 32, 32	N	N	N
+
 Conv 2	32, 32, 32	32, 32, 32	3, 3, 32,32	1, 1, 1, 1	N
+
 Relu	32, 32, 32	32, 32, 32	N	N	N
+
 Max_pooling	32, 32, 32	16, 16, 32	1, 2, 2, 1	1, 2, 2, 1	N
+
 dropout	16, 16, 32	16, 16, 32	N	N	0.5
+
 Conv 3	16, 16, 32	16, 16, 64	3, 3, 32, 64	1, 1, 1, 1	N
+
 Relu	16, 16, 64	16, 16, 64	N	N	N
+
 Conv 4	16, 16, 64	16, 16, 64	3, 3, 64, 64	1, 1, 1, 1	N
+
 Relu	16, 16, 64	16, 16, 64	N	N	N
+
 Max_pooling	16, 16, 64	8, 8, 64	1, 2, 2, 1	1, 2, 2, 1	N
+
 dropout	8, 8, 64	8, 8, 64	N	N	0.5
+
 Conv 5	8, 8, 64	8, 8, 128	3, 3, 64, 128	1, 1, 1, 1	N
+
 Relu	8, 8, 128	8, 8, 128	N	N	N
+
 Conv 6	8, 8, 128	8, 8, 128	3, 3, 128, 128	1, 1, 1, 1	N
+
 Relu	8, 8, 128	8, 8, 128	N	N	N
+
 Max_pooling	8, 8, 128	4, 4, 128	1, 2, 2, 1	1, 2, 2, 1	N
+
 dropout	4, 4, 128	4, 4, 128	N	N	0.5
+
 flatten	4, 4, 128	2048	N	N	N
+
 Fully connect	2048	128	N	N	N
+
 Relu	128	128	N	N	N
+
 Dropout	128	128	N	N	0.7
+
 Fully connect	128	128	N	N	N
+
 Relu	128	128	N	N	N
+
 Dropout	128	128	N	N	0.7
+
 Fully connect	128	43	N	N	N
+
 
 Training parameter
 LeNet
+
 Batch Size	32
+
 Optimizer	Adam
+
 Training Epochs	50
+
 Learning Rate	0.001 (Use learning rate decay)
+
 Early Stop	No
 
 VGGNet
+
 Batch Size	64
+
 Optimizer	Adam
+
 Training Epochs	50
+
 Learning Rate	0.001 (Use learning rate decay)
+
 Early Stop	Yes
 
 Training and test results
 LeNet
+
 Training accuracy	1
+
 Validation accuracy	0.984
+
 Testing accuracy	0.966
 
