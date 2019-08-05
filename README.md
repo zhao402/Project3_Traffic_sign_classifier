@@ -183,3 +183,54 @@ Validation accuracy	0.984
 
 Testing accuracy	0.966
 
+![](examples/lenet.PNG)
+VGGNet
+
+Training accuracy	1
+
+Validation accuracy	0.994
+
+Testing accuracy	0.978
+
+![](examples/vgg.PNG)
+
+Test on new images
+
+Five new traffic sign images downloaded to test the model performance.
+![](examples/new_image.PNG)
+
+The actual category for each image from left to right is;
+
+•	Speed limit (60 km/h) [3]
+
+•	Right-of-way at the next intersection [11]
+
+•	General caution [18]
+
+•	Speed limit (30 km/h) [1]
+
+•	Road work [25]
+
+Based on the VGGNet model, the prediction results are [3, 11, 18, 1, 25], and the test accuracy is 1.  The output top 5 softmax probabilities for each image are shown below:
+Top 5 predictions for each image:
+
+Speed limit (60 km/h)	Right-of-way at the next intersection	General caution	Speed limit (30 km/h)	Road work
+
+3	11	18	1	25
+
+5	30	26	0	22
+
+16	28	25	2	29
+
+33	37	27	4	11
+
+15	27	11	5	20
+Corresponding probability for top 5 predictions for each image
+
+Speed limit (60 km/h)	Right-of-way at the next intersection	General caution	Speed limit (30 km/h)	Road work
+
+1.00000000e+00	1.00000000e+00	1.00000000e+00	1.00000000e+00	1.00000000e+00
+7.22670469e-15	5.23105472e-16	7.04281078e-11	9.17219981e-11	1.34532814e-16
+4.62976575e-20	1.58270256e-21	3.17348822e-14	6.18408802e-15	4.51197136e-20
+4.94732605e-21	3.70903307e-24	1.79705595e-14	2.64603934e-16	3.33177042e-20
+4.30839042e-21	8.41800328e-27	1.47142858e-16	1.22935831e-17	1.70197468e-20
