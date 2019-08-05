@@ -197,6 +197,7 @@ Testing accuracy	0.978
 Test on new images
 
 Five new traffic sign images downloaded to test the model performance.
+
 ![](examples/new_image.PNG)
 
 The actual category for each image from left to right is;
@@ -230,7 +231,11 @@ Corresponding probability for top 5 predictions for each image
 Speed limit (60 km/h)	Right-of-way at the next intersection	General caution	Speed limit (30 km/h)	Road work
 
 1.00000000e+00	1.00000000e+00	1.00000000e+00	1.00000000e+00	1.00000000e+00
+
 7.22670469e-15	5.23105472e-16	7.04281078e-11	9.17219981e-11	1.34532814e-16
+
 4.62976575e-20	1.58270256e-21	3.17348822e-14	6.18408802e-15	4.51197136e-20
+
 4.94732605e-21	3.70903307e-24	1.79705595e-14	2.64603934e-16	3.33177042e-20
+
 4.30839042e-21	8.41800328e-27	1.47142858e-16	1.22935831e-17	1.70197468e-20
