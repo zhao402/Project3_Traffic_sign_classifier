@@ -1,6 +1,8 @@
 ## Project: Build a Traffic Sign Recognition Program
 Goal
+
 •	Build deep convolution neuron network to classify traffic sign images
+
 •	Achieve test accuracy larger than 0.93
 
 Dataset Exploration
@@ -9,12 +11,14 @@ This project includes three datasets: training, validation, and testing datasets
 Training	Validation	Testing
 34799	4410	12630
 For each single RBG image, the size is 32 pixels by 32 pixels.  Three sample images are shown below;
-![](examples/s1.png)
-![](examples/s2.png)
-![](examples/s3.png)
-![](examples/s4.png)
+
+![](examples/s1.PNG)
+![](examples/s2.PNG)
+![](examples/s3.PNG)
+![](examples/s4.PNG)
 The total category number of traffic sign images is 43, the distribution of each traffic sign category for training dataset is shown below:
-![](examples/train.png)
+
+![](examples/train.PNG)
 Data Preprocessing
 Several data preprocessing methods are employed before the training process.
 	Normalize traffic sign images.  For each image, divide each pixel value by 255, to make pixel values are in the range [0, 1]
@@ -27,14 +31,19 @@ From the training data category distribution plot, different categories have lar
 	Translation to the right, shift images to the right bottom corner with range [1, 8] pixel numbers for both x and y direction
 	Image tilt, tilt range is [-10, 10] degree
 Each image randomly chooses one of transforms from the above three options and save the original and augmented data.  Each category should have at least 800 images.  The new training data and label information is saved as pickle file.  The new distribution plot of training dataset is shown below:
-![](examples/train_aug.png)
+
+![](examples/train_aug.PNG)
 Model Architecture
 Two model architectures are used during the training process.
 Modified LeNet
 	Input size	Output size	Kernel size	Stride size	Keep_prob
+	
 Conv 1	32, 32, 1	32, 32, 64	3, 3, 1, 64	1, 1, 1, 1	N
+
 Relu	32, 32, 64	32, 32, 64	N	N	N
+
 Max_pooling	32, 32, 64	16, 16, 64	1, 2, 2, 1	1, 2, 2, 1	N
+
 Batch Norm	16, 16, 64	16, 16, 64	N	N	N
 Conv 2	16, 16, 64	16, 16, 128	3, 3, 64, 128	1, 1, 1, 1	N
 Relu	16, 16, 128	16, 16, 128	N	N	N
